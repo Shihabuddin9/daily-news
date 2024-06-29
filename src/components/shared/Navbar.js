@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
@@ -17,24 +17,21 @@ import AdbIcon from '@mui/icons-material/Adb';
 import Link from 'next/link';
 
 const pages = [
-    {
-        route: 'Products',
-        pathName: '/Products'
-    },
-    {
-        route: 'Pricing',
-        pathName: '/Pricing'
-    },
-    {
-        route: 'Blog',
-        pathName: '/Blog'
-    },
+    { route: 'Bangladesh', pathName: '/bangladesh' },
+    { route: 'International', pathName: '/international' },
+    { route: 'Sports', pathName: '/sports' },
+    { route: 'Opinion', pathName: '/opinion' },
+    { route: 'Business', pathName: '/business' },
+    { route: 'Youth', pathName: '/youth' },
+    { route: 'Entertainment', pathName: '/entertainment' },
+    { route: 'Lifestyle', pathName: '/lifestyle' },
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const [shadow, setShadow] = React.useState(false);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -51,9 +48,29 @@ function Navbar() {
         setAnchorElUser(null);
     };
 
+    React.useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setShadow(true);
+            } else {
+                setShadow(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <AppBar position="sticky" className='bg-white border-t border-t-slate-300'>
-            <Container maxWidth="xl">
+        <AppBar
+            position="sticky"
+            sx={{ boxShadow: shadow ? 1 : 'none' }}
+            className='bg-white border-t border-b-2 border-t-slate-200 border-b-gray-400'
+        >
+            <Container maxWidth="xl" className=''>
                 <Toolbar disableGutters>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -86,12 +103,12 @@ function Navbar() {
                         >
                             {pages.map((page, ind) => (
                                 <MenuItem key={ind} onClick={handleCloseNavMenu}>
-                                    <Link href={page.pathName}> <Typography textAlign="center">{page.route}</Typography></Link>
+                                    <Link href={page.pathName}> <Typography className='text-black font-bold' textAlign="center">{page.route}</Typography></Link>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
                     <Typography
                         variant="h5"
                         noWrap
@@ -114,7 +131,7 @@ function Navbar() {
                         {pages.map((page, ind) => (
                             <Link key={ind} href={page.pathName}>
                                 <Button
-
+                                    className='text-gray-900 font-bold hover:text-blue-600 normal-case'
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
                                 >
@@ -158,4 +175,5 @@ function Navbar() {
         </AppBar>
     );
 }
+
 export default Navbar;
