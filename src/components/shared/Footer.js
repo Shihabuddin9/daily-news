@@ -5,6 +5,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import AppleIcon from '@mui/icons-material/Apple';
 
 const Footer = () => {
     const sections = [
@@ -51,14 +52,11 @@ const Footer = () => {
                     ))}
                 </ul>
             </Box>
-            <Box className='flex justify-between my-10'>
+            {/* social media */}
+            <Box className='flex justify-between mt-4 mb-5'>
                 <Box>
                     <Box className="">
-                        <h1 className='text-center mb-2'>Follow us</h1>
-                        {/* <Link className='' href="#"><FacebookIcon className=' text-blue-600' sx={{ fontSize: 35, '&:hover': { transform: 'scale(1.07)' } }} /></Link>
-                        <Link className='mx-5' href="#"><XIcon className='' sx={{ fontSize: 28, '&:hover': { transform: 'scale(1.07)' } }} /></Link>
-                        <Link href="#"><InstagramIcon className=' ' sx={{ fontSize: 30, '&:hover': { transform: 'scale(1.07)' } }} /></Link>
-                        <Link className='ml-5' href="#"><YouTubeIcon className=' text-red-500' sx={{ fontSize: 38, '&:hover': { transform: 'scale(1.07)' } }} /></Link> */}
+                        <h1 className='text-center mb-2 text-gray-500'>Follow us</h1>
                         {socialLinks.map((link, index) => (
                             <Link key={index} href={link.href}>
                                 {link.icon}
@@ -67,7 +65,23 @@ const Footer = () => {
                     </Box>
                 </Box>
                 <Box>
-                    <h1>Download mobile apps</h1>
+                    <h1 className='text-sm font-serif text-gray-500 text-center'>Download mobile apps</h1>
+                    <Box className="flex justify-center items-center space-x-5">
+                        <Box className="flex justify-center items-center hover:border-gray-400 border rounded px-4 py-2 cursor-pointer font-serif text-gray-500" xs={{ transform: 'scale(1.07)' }}>
+                            <AppleIcon />
+                            <Box>
+                                <small className='block -mb-2 text-[9px]'>GET IT ON</small>
+                                <small className='font-bold'>Google play</small>
+                            </Box>
+                        </Box>
+                        <Box className="flex justify-center items-center border rounded px-4 py-2 cursor-pointer font-serif text-gray-500 hover:border-gray-400" xs={{ transform: 'scale(1.07)' }}>
+                            <AppleIcon />
+                            <Box>
+                                <small className='block -mb-2 text-[8px]'>download on the</small>
+                                <small className='font-bold'>App Store</small>
+                            </Box>
+                        </Box>
+                    </Box>
                 </Box>
             </Box>
             <Box className='border-y border-gray-300 flex justify-center items-center'>
