@@ -46,6 +46,8 @@ const NewsItem = ({ titleRed, title, description, time, imageSrc, altText }) => 
                     layout='responsive'
                     src={imageSrc}
                     alt={altText}
+                    placeholder="blur"
+
                 />
             </Box>
         </Box>
@@ -54,7 +56,7 @@ const NewsItem = ({ titleRed, title, description, time, imageSrc, altText }) => 
     </Box>
 );
 
-const LeftsideNews = () => {
+const MiddleSideNews = () => {
     return (
         <Box>
             {newsData.map((news) => (
@@ -72,4 +74,4 @@ const LeftsideNews = () => {
     );
 };
 
-export default LeftsideNews;
+export default MiddleSideNews;
