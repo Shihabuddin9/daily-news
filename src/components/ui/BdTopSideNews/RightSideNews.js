@@ -3,6 +3,7 @@
 import RightSideNews_1 from '@/assets/BDTopRightsideNews-img/REPORTc.jpg'
 import { Box } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const newsData = [
     {
@@ -23,15 +24,17 @@ const newsData = [
 
 const NewsItem = ({ title, imageSrc, altText }) => (
     <Box className="mt-5">
-        <Box className="space-y-3 overflow-hidden w-full">
-            <Image className='hover:scale-110 transition-all duration-500 cursor-pointer'
-                src={imageSrc}
-                alt={altText}
-                layout='responsive'
-                placeholder="blur"
-            />
-            <h1 className='font-bold'>{title}</h1>
-        </Box>
+        <Link href='#'>
+            <Box className="space-y-3 overflow-hidden w-full">
+                <Image className='hover:scale-110 transition-all duration-500 cursor-pointer'
+                    src={imageSrc}
+                    alt={altText}
+                    layout='responsive'
+                    placeholder="blur"
+                />
+                <h1 className='font-bold hover:underline underline-offset-4'>{title}</h1>
+            </Box>
+        </Link>
 
     </Box>
 );

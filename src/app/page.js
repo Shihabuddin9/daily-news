@@ -1,4 +1,5 @@
 import TopAdds from "@/components/ui/Advertisement/TopAdds";
+import LeftsideNews from "@/components/ui/BdTopSideNews/LeftSideNews";
 import MiddleSideNews from "@/components/ui/BdTopSideNews/MiddleSideNews";
 import RightSideNews from "@/components/ui/BdTopSideNews/RightSideNews";
 import { Box, Grid } from "@mui/material";
@@ -7,13 +8,13 @@ import { Box, Grid } from "@mui/material";
 const HomePage = () => {
   return (
     <>
-      <Box className="mx-8">
+      <Box className="">
         <TopAdds></TopAdds>
         {/* bd top side news */}
-        <Box>
+        <Box className="mx-8 mt-2">
           <Grid className="" container spacing={3}>
             <Grid item xs={6}>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla non hic eaque exercitationem nesciunt? Autem eaque sequi quaerat nemo odit, ullam saepe atque nisi veniam, eos, sed est! Et, aut!</p>
+              <LeftsideNews></LeftsideNews>
             </Grid>
             <Grid item xs={3}>
               <MiddleSideNews></MiddleSideNews>
