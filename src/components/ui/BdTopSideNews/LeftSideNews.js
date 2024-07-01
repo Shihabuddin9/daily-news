@@ -2,7 +2,7 @@
 
 import { Box } from '@mui/material';
 import Image from 'next/image';
-import Gaja_img from '@/assets/BDTopLeftSideNews-img/prothomalo-english.jpg'
+import Gaja_img from '@/assets/BDTopLeftSideNews-img/prothomalo-english.jpg';
 import Link from 'next/link';
 
 const newsData = [
@@ -12,16 +12,16 @@ const newsData = [
         description: "Heavy battles and bombardment hit Gaza City's Shujaiya district for a fourth day on Sunday, months after the Israeli army declared Hamas's command structure dismantled in the northern area.",
         imageSrc: Gaja_img,
         altText: "Gaja_img",
-        point_1: 'Democrats fear replacement scenarios as much as keeping Biden',
-        point_2: 'Biden’s family encourages him to stay in the race as they discuss whether top advisers should be fired',
-        point_3: 'Democrats fear replacement scenarios as much as keeping Biden',
-        point_4: 'Biden’s family encourages him to stay in the race as they discuss whether top advisers should be fired',
+        points: [
+            'Democrats fear replacement scenarios as much as keeping Biden',
+            'Biden’s family encourages him to stay in the race as they discuss whether top advisers should be fired',
+            'Democrats fear replacement scenarios as much as keeping Biden',
+            'Biden’s family encourages him to stay in the race as they discuss whether top advisers should be fired',
+        ],
     },
-
-
 ];
 
-const NewsItem = ({ title, description, imageSrc, altText, point_1, point_2, point_3, point_4 }) => (
+const NewsItem = ({ title, description, imageSrc, altText, points }) => (
     <Box className="border-b border-b-gray-300 mb-4 last:border-b-0">
         <Link href="#">
             <Box className='mb-2'>
@@ -39,33 +39,27 @@ const NewsItem = ({ title, description, imageSrc, altText, point_1, point_2, poi
             <p className='text-gray-600 leading-5 font-serif hover:text-gray-800 hover:underline underline-offset-1'>{description}</p>
 
             <ul className='mt-3 space-y-3 list-disc font-semibold'>
-                <li className='hover:underline underline-offset-1'>{point_1}</li>
-                <li className='hover:underline underline-offset-1'>{point_2}</li>
-                <li className='hover:underline underline-offset-1'>{point_3}</li>
-                <li className='hover:underline underline-offset-1'>{point_4}</li>
+                {points.map((point, index) => (
+                    <li key={index} className='hover:underline underline-offset-1'>{point}</li>
+                ))}
             </ul>
         </Link>
     </Box>
 );
 
-const LeftSideNews = () => {
-    return (
-        <Box>
-            {newsData.map((news) => (
-                <NewsItem
-                    key={news.id}
-                    title={news.title}
-                    description={news.description}
-                    imageSrc={news.imageSrc}
-                    altText={news.altText}
-                    point_1={news.point_1}
-                    point_2={news.point_2}
-                    point_3={news.point_3}
-                    point_4={news.point_4}
-                />
-            ))}
-        </Box>
-    );
-};
+const LeftSideNews = () => (
+    <Box>
+        {newsData.map((news) => (
+            <NewsItem
+                key={news.id}
+                title={news.title}
+                description={news.description}
+                imageSrc={news.imageSrc}
+                altText={news.altText}
+                points={news.points}
+            />
+        ))}
+    </Box>
+);
 
 export default LeftSideNews;

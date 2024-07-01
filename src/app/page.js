@@ -1,3 +1,4 @@
+import MiddleAdds from "@/components/ui/Advertisement/MiddleAdds";
 import TopAdds from "@/components/ui/Advertisement/TopAdds";
 import LeftsideNews from "@/components/ui/BdTopSideNews/LeftSideNews";
 import MiddleSideNews from "@/components/ui/BdTopSideNews/MiddleSideNews";
@@ -9,6 +10,7 @@ const HomePage = () => {
   return (
     <>
       <Box className="">
+        {/* for adds */}
         <TopAdds></TopAdds>
         {/* bd top side news */}
         <Box className="mx-8 mt-2">
@@ -24,6 +26,8 @@ const HomePage = () => {
             </Grid>
           </Grid>
         </Box>
+        {/* for adds */}
+        <MiddleAdds></MiddleAdds>
       </Box>
     </>
   );
