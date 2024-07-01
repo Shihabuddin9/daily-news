@@ -6,6 +6,7 @@ import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import AppleIcon from '@mui/icons-material/Apple';
+import GoogleIcon from '@mui/icons-material/Google';
 
 const Footer = () => {
     const sections = [
@@ -34,29 +35,31 @@ const Footer = () => {
         { icon: <YouTubeIcon className='text-red-500 ml-5' sx={{ fontSize: 38, '&:hover': { transform: 'scale(1.07)' } }} />, href: '#' }
     ];
     return (
-        <Box className='mx-5 my-20 border-t border-gray-300'>
+        <Box className='mx-8 mt-20 md:mb-20 mb-10  border-t border-gray-300'>
             <Box className='my-6 border-b border-gray-300'>
-                <Box className="mb-6">
-                    <h1 className="font-bold">
-                        <span className="text-3xl lg:text-4xl text-orange-500">D</span>
-                        <span className="text-xl lg:text-2xl">ailynews.com</span>
-                    </h1>
+                <Box className="">
+                    <Box className="md:mb-6 mb-3 text-center md:text-start">
+                        <h1 className="font-bold">
+                            <span className="text-3xl lg:text-4xl text-orange-500">D</span>
+                            <span className="text-xl lg:text-2xl">ailynews.com</span>
+                        </h1>
+                    </Box>
+                    <ul className='flex flex-wrap md:grid grid-cols-3 gap-3 mb-6'>
+                        {sections.map((section, index) => (
+                            <li key={index}>
+                                <Link href={section.href} className='hover:text-blue-500 underline md:no-underline'>
+                                    {section.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
                 </Box>
-                <ul className='grid grid-cols-3 gap-3 mb-6'>
-                    {sections.map((section, index) => (
-                        <li key={index}>
-                            <Link href={section.href} className='hover:text-blue-500'>
-                                {section.name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
             </Box>
             {/* social media */}
-            <Box className='flex justify-between mt-4 mb-5'>
-                <Box>
+            <Box className='md:flex justify-between mt-4 mb-5'>
+                <Box className="mb-5 md:mb-0 flex justify-center md:flex-none">
                     <Box className="">
-                        <h1 className='text-center mb-2 text-gray-500'>Follow us</h1>
+                        <h1 className='text-center mb-0.5 text-gray-500'>Follow us</h1>
                         {socialLinks.map((link, index) => (
                             <Link key={index} href={link.href}>
                                 {link.icon}
@@ -65,10 +68,10 @@ const Footer = () => {
                     </Box>
                 </Box>
                 <Box>
-                    <h1 className='text-sm font-serif text-gray-500 text-center'>Download mobile apps</h1>
-                    <Box className="flex justify-center items-center space-x-5">
+                    <h1 className='text-sm font-serif text-gray-500 text-center mb-0.5'>Download mobile apps</h1>
+                    <Box className="flex justify-evenly items-center space-x-5">
                         <Box className="flex justify-center items-center hover:border-gray-400 border rounded px-4 py-2 cursor-pointer font-serif text-gray-500" xs={{ transform: 'scale(1.07)' }}>
-                            <AppleIcon />
+                            <GoogleIcon />
                             <Box>
                                 <small className='block -mb-2 text-[9px]'>GET IT ON</small>
                                 <small className='font-bold'>Google play</small>
@@ -85,7 +88,7 @@ const Footer = () => {
                 </Box>
             </Box>
             <Box className='border-y border-gray-300 flex justify-center items-center'>
-                <ul className='flex space-x-3 my-1 text-gray-400 font-serif'>
+                <ul className='md:flex grid grid-cols-3 gap-0 md:space-x-3 space-x-1 my-1 text-gray-400 font-serif'>
                     {infoLinks.map((link, index) => (
                         <li key={index}>
                             <Link href={link.href} className='hover:text-blue-500'>
@@ -95,9 +98,9 @@ const Footer = () => {
                     ))}
                 </ul>
             </Box>
-            <Box className='flex justify-center items-center text-gray-400 font-serif text-xs mt-2'>
-                <span>Copyright © 1998-2024 Daily News</span>
-                <span className='mx-2'>-</span>
+            <Box className='md:flex justify-center items-center text-gray-400 font-serif text-xs mt-2 text-center'>
+                <span className='block md:inline mb-1 md:mb-0'>Copyright © 1998-2024 Daily News</span>
+                <span className='mx-2 hidden md:block'>-</span>
                 <span>Editor & Publisher: Shihab Uddin</span>
             </Box>
         </Box>

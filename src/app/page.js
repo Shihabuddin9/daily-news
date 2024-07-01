@@ -1,8 +1,24 @@
+import LeftsideNews from "@/components/ui/BdTopSideNews/LeftsideNews";
+import { Box, Grid } from "@mui/material";
+
+
 const HomePage = () => {
   return (
-    <div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perspiciatis quis aspernatur sit ipsam enim a ad debitis nihil quibusdam cum inventore sint numquam reprehenderit, non modi? Nemo maxime corporis consequatur obcaecati illum distinctio porro magnam dignissimos error? Quaerat laborum doloremque beatae quos quisquam numquam nesciunt iusto at nobis libero, alias corporis quibusdam. Provident, eveniet molestias, minus odio perspiciatis corporis, sapiente cumque excepturi iusto quidem quam quos! Aliquam vitae illo quasi repellendus numquam officiis nemo id, sed ea enim placeat consequatur laborum impedit rem totam explicabo perspiciatis neque repellat nisi excepturi sunt ab blanditiis dolorum! Repellendus animi iure, soluta quaerat placeat ipsa eum, repudiandae quos, maiores excepturi quisquam! Porro labore vero enim, consectetur numquam, qui itaque illum possimus nemo alias sunt aspernatur debitis quasi inventore asperiores eveniet perferendis unde reprehenderit ex saepe quaerat corrupti eum. Veniam optio neque consectetur quasi veritatis nesciunt, maiores quaerat tempora officiis vel illo nemo! Ipsa excepturi sint voluptates quas architecto minima incidunt laboriosam molestiae corrupti error temporibus rem eveniet, deserunt ullam dicta deleniti aut blanditiis quidem. Asperiores aperiam commodi nulla labore expedita molestiae dolorum perspiciatis earum atque deserunt nostrum necessitatibus, quisquam fugiat quod alias nobis officia corrupti doloremque explicabo? Nostrum natus quis sit molestiae officiis? Cupiditate ratione, accusamus facere delectus, unde quasi maiores, dicta voluptas consequatur earum facilis tempora vero aperiam! Suscipit earum deleniti reiciendis eos dolores mollitia nulla eius debitis odit voluptatem aliquid quae, aliquam reprehenderit harum cumque nemo laudantium eligendi, asperiores vitae ea unde autem libero. Aspernatur molestiae maxime natus, repellendus voluptatum velit ipsam. Aperiam quisquam dicta sapiente adipisci culpa magni cupiditate, odio tempore quia. Libero, delectus minima! Impedit distinctio adipisci, excepturi ratione atque, cumque non laboriosam officia itaque nihil cupiditate, voluptates reiciendis natus odio voluptatum illo animi iusto autem id exercitationem. Dolor provident tempore ad aperiam fugit quasi voluptatum ducimus error itaque vitae omnis soluta, id veritatis rem illo enim totam. Incidunt neque distinctio natus facere ab pariatur ad non aut provident delectus, inventore libero eveniet repudiandae nesciunt cupiditate eius ratione molestias nulla, molestiae quibusdam quod optio. Asperiores minus eaque quas reprehenderit. Saepe laudantium consequatur suscipit sequi ipsa nobis delectus quae facilis accusamus accusantium soluta reiciendis tempore officia hic autem, quasi ex ducimus qui. Minus sequi exercitationem cupiditate consequuntur voluptatibus, ipsa corporis quidem alias dolorum, sapiente dolorem deserunt. Quos rem assumenda voluptatem neque, nam dicta quam cupiditate dolores, accusantium vero officiis quasi molestiae veritatis quis consequuntur voluptas dolore tempora aliquid reprehenderit non aut iure voluptatum iste! A quod temporibus vel voluptates corporis minus ea fugit ipsa porro. Ducimus nobis qui in nesciunt fugiat eos tenetur minima accusantium architecto? Debitis autem tenetur, nam adipisci vitae, totam cupiditate vero modi expedita sapiente minus recusandae itaque enim officia. Quae cumque vitae sit laudantium quas animi totam quidem voluptate, quis nam modi perspiciatis culpa ab accusamus est corrupti neque hic natus obcaecati ratione sed exercitationem iusto. Esse incidunt enim unde porro! Culpa, cum, quam dolor mollitia magni ex ipsam exercitationem quis veritatis vitae amet minima ab dolorem quisquam temporibus quae. Dolores perspiciatis et pariatur corporis iste?</p>
-    </div>
+    <>
+      <Box className="mx-8">
+        <Grid className="" container spacing={3}>
+          <Grid item xs={6}>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla non hic eaque exercitationem nesciunt? Autem eaque sequi quaerat nemo odit, ullam saepe atque nisi veniam, eos, sed est! Et, aut!</p>
+          </Grid>
+          <Grid item xs={3}>
+            <LeftsideNews></LeftsideNews>
+          </Grid>
+          <Grid item xs={3}>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla non hic eaque exercitationem nesciunt? Autem eaque sequi quaerat nemo odit, ullam saepe atque nisi veniam, eos, sed est! Et, aut!</p>
+          </Grid>
+        </Grid>
+      </Box>
+    </>
   );
 };
 

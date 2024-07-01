@@ -6,6 +6,7 @@ import NavbarTopInfo_img_2 from '@/assets/NavbarTopInfo-img/NavbarTopInfo-img-2.
 import NavbarTopInfo_img_3 from '@/assets/NavbarTopInfo-img/NavbarTopInfo-img-3.jpg'
 import Image from 'next/image';
 import Link from 'next/link';
+
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import GroupsIcon from '@mui/icons-material/Groups';
@@ -13,7 +14,7 @@ import GroupsIcon from '@mui/icons-material/Groups';
 
 const NavbarTopInfo = () => {
     return (
-        <Box className="xl:my-6 lg:my-6 my-4 md:grid grid-cols-3 gap-3 mx-5">
+        <Box className="xl:my-6 lg:my-6 my-4 md:grid grid-cols-3 gap-3 mx-8">
             <Box className='xl:mt-2'>
                 <h1 className="font-bold"><span className="text-3xl lg:text-4xl text-orange-500">D</span><span className="text-xl lg:text-2xl">AILY NEWS</span></h1>
             </Box>

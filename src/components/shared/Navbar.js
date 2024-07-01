@@ -68,7 +68,8 @@ function Navbar() {
         <AppBar
             position="sticky"
             sx={{ boxShadow: shadow ? 1 : 'none' }}
-            className='bg-white border-t border-b-2 border-t-slate-200 border-b-gray-400'
+            className={`bg-white border-t ${shadow ? 'border-b-gray-100 shadow-xl border-b-2' : 'border-b-2 border-b-gray-400'} border-t-slate-200 `}
+
         >
             <Container maxWidth="xl" className=''>
                 <Toolbar disableGutters>
