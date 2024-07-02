@@ -3,6 +3,7 @@ import TopAdds from "@/components/ui/Advertisement/TopAdds";
 import LeftsideNews from "@/components/ui/BdTopSideNews/LeftSideNews";
 import MiddleSideNews from "@/components/ui/BdTopSideNews/MiddleSideNews";
 import RightSideNews from "@/components/ui/BdTopSideNews/RightSideNews";
+import InternationalNews from "@/components/ui/InternationalNews/InternationalNews";
 import { Box, Grid } from "@mui/material";
 
 
@@ -30,6 +31,9 @@ const HomePage = () => {
         </Box>
         {/* for adds */}
         <MiddleAdds></MiddleAdds>
+
+        {/* InternationalNews */}
+        <InternationalNews></InternationalNews>
       </Box>
     </>
   );

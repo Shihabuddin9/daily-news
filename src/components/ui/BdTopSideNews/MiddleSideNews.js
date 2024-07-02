@@ -39,7 +39,7 @@ const NewsItem = ({ titleRed, title, description, time, imageSrc, altText }) => 
     <Box className="border-b md:border-b-0 lg:border-b border-b-gray-300 md:mb-4 mb-2 last:border-b-0 ">
         <Link href="#" className='hidden lg:block'>
             <Box className='flex mb-2'>
-                <h1 className='font-bold font-serif leading-5 text-gray-800 hover:underline underline-offset-4'>
+                <h1 className='font-bold leading-5 text-gray-800 hover:underline underline-offset-4'>
                     <span className='text-red-600'>{titleRed}</span> - {title}
                 </h1>
                 <Box className='overflow-hidden w-full'>
