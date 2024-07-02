@@ -23,19 +23,18 @@ const newsData = [
 ];
 
 const NewsItem = ({ title, imageSrc, altText }) => (
-    <Box className="mt-5">
+    <Box className="mt-5 border-r lg:border-r-0 last:border-r-0">
         <Link href='#'>
-            <Box className="space-y-3 overflow-hidden w-full">
+            <Box className="space-y-3 overflow-hidden w-full pr-2">
                 <Image className='hover:scale-110 transition-all duration-500 cursor-pointer'
                     src={imageSrc}
                     alt={altText}
                     layout='responsive'
                     placeholder="blur"
                 />
-                <h1 className='font-bold hover:underline underline-offset-4'>{title}</h1>
+                <h1 className='font-bold hover:underline underline-offset-4 xl:text-base text-sm'>{title}</h1>
             </Box>
         </Link>
-
     </Box>
 );
 
@@ -46,7 +45,7 @@ const RightSideNews = () => {
                 <small className='text-center mt-5'>Advertize</small>
                 <Box className="h-48 border p-10"></Box>
             </Box>
-            <Box>
+            <Box className='flex lg:flex-col space-x-2 lg:space-x-0'>
                 {newsData.map((news) => (
                     <NewsItem
                         key={news.id}

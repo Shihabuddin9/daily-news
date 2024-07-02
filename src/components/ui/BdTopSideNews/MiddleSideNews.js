@@ -10,7 +10,7 @@ const newsData = [
         titleRed: "10 MoUs",
         title: " India achieves everything, Bangladesh gains nothing: BNP",
         description: "Mirza Fakhrul made these allegations at a press conference at the BNP chairperson’s political office in Gulshan, Dhaka on Sunday",
-        time: "1 hour ago",
+        time: "25 minute ago",
         imageSrc: Fakrul,
         altText: "Fakrul"
     },
@@ -28,7 +28,7 @@ const newsData = [
         titleRed: "10 MoUs",
         title: " India achieves everything, Bangladesh gains nothing: BNP",
         description: "Mirza Fakhrul made these allegations at a press conference at the BNP chairperson’s political office in Gulshan, Dhaka on Sunday",
-        time: "1 hour ago",
+        time: "2 hour ago",
         imageSrc: Fakrul,
         altText: "Fakrul"
     },
@@ -36,10 +36,10 @@ const newsData = [
 ];
 
 const NewsItem = ({ titleRed, title, description, time, imageSrc, altText }) => (
-    <Box className="border-b border-b-gray-300 mb-4 last:border-b-0">
-        <Link href="#">
+    <Box className="border-b md:border-b-0 lg:border-b border-b-gray-300 md:mb-4 mb-2 last:border-b-0 ">
+        <Link href="#" className='hidden lg:block'>
             <Box className='flex mb-2'>
-                <h1 className='font-bold mt-1 font-serif leading-5 text-gray-800 hover:underline underline-offset-4'>
+                <h1 className='font-bold font-serif leading-5 text-gray-800 hover:underline underline-offset-4'>
                     <span className='text-red-600'>{titleRed}</span> - {title}
                 </h1>
                 <Box className='overflow-hidden w-full'>
@@ -55,6 +55,25 @@ const NewsItem = ({ titleRed, title, description, time, imageSrc, altText }) => 
             </Box>
             <p className='text-gray-600 leading-5 font-serif hover:text-gray-800'>{description}</p>
             <small className='block my-3 text-gray-600'>{time}</small>
+        </Link>
+
+        <Link href="#" className='lg:hidden flex'>
+            <Box className="mb-3 last:mb-0">
+                <h1 className='font-bold font-serif leading-5 text-gray-800 hover:underline underline-offset-4'>
+                    <span className='text-red-600'>{titleRed}</span> - {title}
+                </h1>
+                <p className='text-gray-600 leading-5 font-serif hover:text-gray-800 md:my-3 my-2 md:text-base text-sm'>{description}</p>
+                <small className=' text-gray-600 md:text-sm text-xs'>{time}</small>
+            </Box>
+            <Box className='overflow-hidden w-full'>
+                <Image
+                    className='hover:scale-110 transition-all duration-500 cursor-pointer'
+                    layout='responsive'
+                    src={imageSrc}
+                    alt={altText}
+                    placeholder="blur"
+                />
+            </Box>
         </Link>
     </Box>
 );

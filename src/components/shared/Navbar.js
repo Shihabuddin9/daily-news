@@ -28,6 +28,7 @@ const pages = [
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
+
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -71,8 +72,8 @@ function Navbar() {
             className={`bg-white border-t ${shadow ? 'border-b-gray-100 shadow-xl border-b-2' : 'border-b-2 border-b-gray-400'} border-t-slate-200 `}
 
         >
-            <Container maxWidth="xl" className=''>
-                <Toolbar disableGutters>
+            <Container maxWidth='xl' className='pl-0 lg:pl-[24px]'>
+                <Toolbar disableGutters className=''>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
@@ -80,7 +81,7 @@ function Navbar() {
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
-                            color="inherit"
+
                         >
                             <MenuIcon />
                         </IconButton>
@@ -109,25 +110,7 @@ function Navbar() {
                             ))}
                         </Menu>
                     </Box>
-                    {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
+
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page, ind) => (
                             <Link key={ind} href={page.pathName}>

@@ -13,18 +13,20 @@ const HomePage = () => {
         {/* for adds */}
         <TopAdds></TopAdds>
         {/* bd top side news */}
-        <Box className="mx-8 mt-2">
-          <Grid className="" container spacing={3}>
-            <Grid item xs={6}>
-              <LeftsideNews></LeftsideNews>
+        <Box className="lg:mx-8 mx-2 mt-2">
+          <Box sx={{ flexGrow: 1 }}>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={6}>
+                <LeftsideNews />
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <MiddleSideNews />
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <RightSideNews />
+              </Grid>
             </Grid>
-            <Grid item xs={3}>
-              <MiddleSideNews></MiddleSideNews>
-            </Grid>
-            <Grid item xs={3}>
-              <RightSideNews></RightSideNews>
-            </Grid>
-          </Grid>
+          </Box>
         </Box>
         {/* for adds */}
         <MiddleAdds></MiddleAdds>
