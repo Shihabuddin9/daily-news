@@ -58,19 +58,19 @@ const InternationalNews = () => {
                 </Link>
                 <span className='text-orange-500'><ArrowForwardIosIcon /></span>
             </Box>
-            <Box className="grid grid-cols-3 gap-4">
+            <Box className="grid md:grid-cols-3 grid-cols-2 gap-4">
                 {articles.map((article, index) => (
                     <Box key={index} className={article.isFeatured ? 'row-span-2' : ''}>
                         <Link href='#'>
                             <Box className='overflow-hidden'>
                                 <Image className='w-full hover:scale-110 transition-all duration-500 cursor-pointer' src={article.img} placeholder='blur' alt={article.alt} />
                             </Box>
-                            <h1 className='font-bold text-xl hover:underline underline-offset-4 leading-6 mt-3 text-gray-800'>{article.title}</h1>
+                            <h1 className='font-bold lg:text-xl md:text-sm text-xs hover:underline underline-offset-4 lg:leading-6 md:leading-5 mt-3 text-gray-800'>{article.title}</h1>
                         </Link>
                         {article.isFeatured && (
                             <>
-                                <p className='text-gray-600 my-4'>{article.description}</p>
-                                <small className='text-sm text-gray-600'>{article.time}</small>
+                                <p className='text-gray-600 my-4 lg:text-base text-xs md:text-sm'>{article.description}</p>
+                                <small className='lg:text-sm text-xs text-gray-600'>{article.time}</small>
                             </>
                         )}
                     </Box>

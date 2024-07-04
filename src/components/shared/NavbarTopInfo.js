@@ -45,7 +45,7 @@ const NavbarTopInfoLink = ({ href, img, Icon, text }) => (
 
 const NavbarTopInfo = () => {
     return (
-        <Box className="xl:my-7 lg:my-4 my-4 md:grid xl:grid-cols-3 grid-cols-4 gap-3 lg:mx-8 md:mx-4 mx-2">
+        <Box className="xl:my-6 lg:my-4 my-4 md:grid xl:grid-cols-3 grid-cols-4 gap-3 lg:mx-8 md:mx-4 mx-2">
             <Box className="xl:mt-2 col-span-1">
                 <Typography className="font-bold">
                     <span className="text-3xl lg:text-4xl text-orange-500">D</span>
